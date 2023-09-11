@@ -8,7 +8,8 @@ public class arvauspeli {
 		Scanner in = new Scanner(System.in);
 		
 		String answer1;
-
+		int guesses = 0;
+		
 		do
 		{
 		System.out.println("What is my name?");
@@ -17,16 +18,27 @@ public class arvauspeli {
 		if (answer1.equals("Noora"))
 		{
 			System.out.println("Congratulations! You guessed right.");
+			guesses = guesses + 1;
 			break;
 		}
 		
-		else 
+		else if (answer1.equals("end"))
+		{
+			System.out.println("Thank you for playing.");
+			guesses = guesses + 1;
+			break;
+		}
+		
+		else
 		{
 			System.out.println("Wrong! Guess again.");
+			guesses = guesses + 1;
 		}
 		}
 		while (true);
-		
+		{
+			System.out.println("You guessed " + guesses + " times");
+		}
 		
 	}
 
